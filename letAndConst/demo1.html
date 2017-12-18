@@ -8,16 +8,34 @@
 
 <script>
     /**
-     * let和const命令
-     *
+     * 代码块中var和let
      */
-    {
-        let a = 6;
-        var b = 7;
+//    {
+//        let a = 6;
+//        var b = 7;
+//    };
+//    //let命令只在所在代码块起效
+//    console.log(a);//Uncaught ReferenceError: a is not defined
+//    console.log(b);
+    /**
+     * for循环体中var和let比较
+     */
+    //var
+    var a = [];
+    for(var i =0;i<10;i++){
+        a[i] = function(){
+            console.log(i);
+        }
     };
-    //let命令只在所在代码块起效
-    console.log(a);//Uncaught ReferenceError: a is not defined
-    console.log(b);
+    a[6]();
+    //let
+    var b = [];
+    for(let j = 0;j <10;j++){
+        b[j] = function(){
+            console.log(j)
+        }
+    };
+    b[6]()
 </script>
 </body>
 </html>
