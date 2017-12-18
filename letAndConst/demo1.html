@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    /**
+     * let和const命令
+     *
+     */
+    {
+        let a = 6;
+        var b = 7;
+    };
+    //let命令只在所在代码块起效
+    console.log(a);//Uncaught ReferenceError: a is not defined
+    console.log(b);
+</script>
+</body>
+</html>
